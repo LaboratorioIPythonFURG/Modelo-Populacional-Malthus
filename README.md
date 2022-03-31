@@ -9,4 +9,4 @@
 <h2>Problema proposto:</h2>
     &nbsp; Rio Grande é uma cidade localizada na região sul do Rio Grande do sul e no ano 2000 a população do município era de 186 488 e em 2010 essa população aumentou para 186 488.  De acordo o modelo de crescimento populacional de Malthus, qual será a população estimada para 2022?
 
-<h2>Objetivo: Este repositório busca resolver um problema sobre o modelo populacional de Malthus numericamente através do método de Euler, Euler modificado, RK4 e bibliotecas python.</h2>
+<h2>Objetivo:</h2> Este repositório busca resolver um problema sobre o modelo populacional de Malthus numericamente através do método de Euler, Euler modificado, RK4 e bibliotecas python.
