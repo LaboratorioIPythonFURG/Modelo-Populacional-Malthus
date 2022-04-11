@@ -1,2 +1,2 @@
-def f(T):
-    return -0.1*(T-20)
+def f(P):
+    return 0.0056*P

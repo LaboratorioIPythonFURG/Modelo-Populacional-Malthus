@@ -2,17 +2,17 @@
 import numpy as np
 from f import f
 
-def sol_euler(vt,T0):
+def sol_euler(vt,P0):
     
-    #Declarando vetor de temperaturas
-    T = np.array([T0])
+    #Declarando vetor de Habitantes
+    P = np.array([P0])
     
     #Obtendo passo de derivação (h)
     h = vt[2] - vt[1]
 
-    #Aproximando T(i) pelo método de Euler
+    #Aproximando P(i) pelo método de Euler
     for t in vt:
-        Ti = T[-1]+h*f(T[-1])
-        T = np.append(T,Ti)
+        Pi = P[-1]+h*f(P[-1])
+        P = np.append(P,Pi)
         
-    return T[0:T.shape[0]-1]
+    return P[0:P.shape[0]-1]
