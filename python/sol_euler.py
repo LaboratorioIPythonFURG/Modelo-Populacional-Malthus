@@ -1,6 +1,6 @@
 #dependências
 import numpy as np
-from f import f
+from f_malthus import f
 
 def sol_euler(vt,P0):
     
