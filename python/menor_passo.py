@@ -61,7 +61,7 @@ def menor_passo(ti,tf,h,decrescimo,P0,solucao_IBGE ,dados,metodo,modelo):
                 
                 P = sciInt.odeint(modelo_verhulst, y0=P0, t=vt, tfirst=True)
                 
-            elif metodo == 'RK45' and modelo == 'verhulst'
+            elif metodo == 'RK45' and modelo == 'verhulst':
 
                 P = sciInt.solve_ivp(modelo_verhulst, t_span=(0,max(vt)), y0=[P0], t_eval=vt)
                 P = P.y[0]
