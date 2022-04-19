@@ -1,5 +1,6 @@
 import numpy as np
 from sol_euler import sol_euler
+from sol_euler_mod import sol_euler_mod
 import matplotlib.pyplot as plt
 
 def diferentes_passos(ti,tf,passos,P0,cores,modelo,metodo):
@@ -9,9 +10,15 @@ def diferentes_passos(ti,tf,passos,P0,cores,modelo,metodo):
         #Criando vetor tempo
         vt = np.arange(ti,tf,passo)
         
-        if modelo == 'Malthus' and metodo == 'sol_euler':            
-            #Chamando a função sol_euler 
-            P = sol_euler(vt,P0,'malthus')
+        if modelo == 'Malthus':
+            
+            if metodo == 'sol_euler':
+                                
+                P = sol_euler(vt,P0,'malthus')
+                
+            elif metodo == 'sol_euler_mod':
+                
+                P = sol_euler_mod(vt,P0,'malthus')
         
         #Grafico da curva    
         plt.plot(vt,P,'{}'.format(cores[np.where(passos==passo)[0][0]]),label='h = {}'.format(passo))
