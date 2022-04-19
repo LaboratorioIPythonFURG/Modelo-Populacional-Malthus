@@ -30,6 +30,10 @@ def diferentes_passos(ti,tf,passos,P0,cores,modelo,metodo):
             if metodo == 'sol_euler':
                 
                 P = sol_euler(vt,P0,'verhulst')
+                
+            elif metodo == 'sol_euler_mod':
+                
+                P = sol_euler_mod(vt,P0,'verhulst')
             
                 
         #Grafico da curva    
@@ -40,6 +44,7 @@ def diferentes_passos(ti,tf,passos,P0,cores,modelo,metodo):
     plt.title("Simulação populacional para diferentes passos de derivação")
     plt.xlabel("Anos (Ano+2*10^3)")
     plt.ylabel("Número de habitantes")
+    plt.legend()
     plt.show()
     
     return P
