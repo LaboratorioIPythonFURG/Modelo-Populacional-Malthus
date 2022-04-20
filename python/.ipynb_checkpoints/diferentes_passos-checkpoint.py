@@ -34,6 +34,10 @@ def diferentes_passos(ti,tf,passos,P0,cores,modelo,metodo):
             elif metodo == 'sol_euler_mod':
                 
                 P = sol_euler_mod(vt,P0,'verhulst')
+                
+            elif metodo == 'sol_rk4':
+                
+                P = sol_rk4(vt,P0,'verhulst')
             
                 
         #Grafico da curva    
