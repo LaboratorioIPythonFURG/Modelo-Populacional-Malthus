@@ -1,4 +1,3 @@
-#dependências
 import numpy as np
 from f_malthus import f_malthus
 from f_verhulst import f_verhulst
@@ -11,7 +10,7 @@ def sol_euler(vt,P0,modelo):
     #Obtendo passo de derivação (h)
     h = vt[2] - vt[1]
 
-    #Aproximando P(i) pelo método de Euler
+    #Aproximando P(i) pelo método de Euler segundo o modelo
     for t in vt:
         
         if modelo=='malthus':
