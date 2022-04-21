@@ -1,4 +1,3 @@
-#dependências
 import numpy as np
 from f_malthus import f_malthus
 from f_verhulst import f_verhulst
