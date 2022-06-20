@@ -1,3 +1,4 @@
+
 import numpy as np
 
 def erro_datasus(dados_datasus,solucoes,metodo):
