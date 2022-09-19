@@ -1,11 +1,12 @@
 import numpy as np
 from f_malthus import f_malthus
 from f_verhulst import f_verhulst
+from f_montroll import f_montroll
 
-def sol_euler_mod(vt,P0,modelo):
+def sol_euler_mod(vt,T0,modelo):
     
     #Declarando vetor de temperaturas
-    P = np.array([P0])
+    T = np.array([T0])
     
     #Obtendo passo de derivação (h)
     h = vt[2] - vt[1]
@@ -14,10 +15,11 @@ def sol_euler_mod(vt,P0,modelo):
     for t in vt:
         
         if modelo=='malthus':
-            Pi = P[-1]+(h/2)*(f_malthus(P[-1])+f_malthus(P[-1]+h*f_malthus(P[-1])))
+            Ti = T[-1]+(h/2)*(f_malthus(T[-1])+f_malthus(T[-1]+h*f_malthus(T[-1])))
         elif modelo=='verhulst':
-            Pi = P[-1]+(h/2)*(f_verhulst(P[-1])+f_verhulst(P[-1]+h*f_verhulst(P[-1])))
+            Ti = T[-1]+(h/2)*(f_verhulst(T[-1])+f_verhulst(T[-1]+h*f_verhulst(T[-1])))
+        elif modelo=='montroll':
+            Ti = T[-1]+(h/2)*(f_montroll(T[-1])+f_montroll(T[-1]+h*f_montroll(T[-1])))    
+        T = np.append(T,Ti)
         
-        P = np.append(P,Pi)
-        
-    return P[0:P.shape[0]-1]
+    return T[0:T.shape[0]-1]

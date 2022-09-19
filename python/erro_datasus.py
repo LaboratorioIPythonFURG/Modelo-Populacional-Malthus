@@ -24,6 +24,7 @@ def erro_datasus(dados_datasus,solucoes,metodo):
         erro_perc = (erro_hab/dados_datasus[i])*100
         #Adicionando linhas à matriz (tabela)
         dados = np.vstack([dados,[i,dados_datasus[i],round(solucao,2),round(erro_hab),str(round(erro_perc,2))+'%']])
+        #dados = np.vstack([dados,[i,dados_datasus[i],round(solucao,2),round(erro_hab),str(erro_perc)+'%']])
         
     #remove a primeira linha da matriz
     dados = np.delete(dados, 0, 0)
