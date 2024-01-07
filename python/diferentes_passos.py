@@ -52,3 +52,4 @@ def diferentes_passos(ti,tf,passos,P0,cores,modelo,metodo):
     plt.show()
     
     return P
+#fim
