@@ -1,14 +1,11 @@
-
 import numpy as np #Biblioteca
 
 def sol_rk4(vt,P0,modelo): #Função RK4
     
-    P = np.array([P0]) #Vetor população
-    
+    P = np.array([P0]) #Vetor população  
     h = vt[2] - vt[1] #Passo de integração
 
-    for t in vt: #Aproximando T(i) pelo método de Euler modificado
-        
+    for t in vt:
         k1 = modelo(P[-1])
         k2 = modelo(P[-1]+(h/2)*k1)
         k3 = modelo(P[-1]+(h/2)*k2)
